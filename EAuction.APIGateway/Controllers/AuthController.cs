@@ -4,6 +4,7 @@ using EAuction.APIGateway.Services;
 using Microsoft.AspNetCore.Authorization;
 
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Threading.Tasks;
 
 namespace APIGateway.Controllers
@@ -25,19 +26,22 @@ namespace APIGateway.Controllers
         #endregion
 
        
-        [HttpPost("validateuser/{email}/{password}")]
+        [HttpPost("validateuser")]
+        [ProducesResponseType(Microsoft.AspNetCore.Http.StatusCodes.Status200OK)]
+        [ProducesResponseType(Microsoft.AspNetCore.Http.StatusCodes.Status409Conflict)]
         [AllowAnonymous]
-        public async Task<ActionResult<User>> ValidateUser(string email, string password)
+        public async Task<IActionResult> ValidateUser([FromBody] User user)
         {
-            var _user = await _userRepository.GetUser(email, password);
+            var _user = await _userRepository.GetUser(user.Email, user.Password);
 
             if (_user != null)
             {
+                _user.Password = null;
                 _user.Token = new AuctionTokenService().GenerateToken(_user).Token;
             }
             else
             {
-                throw new System.Exception("User name or password is invalid!");
+                return Ok(new Error() { StatusCode = 400, ErrorMessage = "Invalid Credentials" });
             }
 
             return Ok(_user);
@@ -46,9 +50,17 @@ namespace APIGateway.Controllers
         [HttpPost]
         [Route("createuser")]
         [AllowAnonymous]
-        public async Task CreateUser([FromBody] User user)
+        public async Task<ActionResult<User>> CreateUser([FromBody] User user)
         {
-            await _userRepository.Create(user);
+            User newUser = await _userRepository.Create(user);     
+            
+            if (newUser == null)
+            {
+                return Ok(new Error() { StatusCode = 400, ErrorMessage = "Email already exist!" });
+            }
+
+            user.Token = new AuctionTokenService().GenerateToken(user).Token;
+            return Ok(user);
         }
     }
 }

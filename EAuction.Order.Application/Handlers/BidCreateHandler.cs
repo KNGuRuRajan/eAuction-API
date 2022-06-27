@@ -29,9 +29,14 @@ namespace EAuction.Order.Application.Handlers
                 throw new ApplicationException("Entity could not be mapped!");
             }
 
-            var order = await _bidRepository.SendBid(bidEntity);
+            var bid = await _bidRepository.SendBid(bidEntity);
 
-            var orderResponse = _mapper.Map<BidResponse>(order);
+            if (bid == null)
+            {
+                return null;
+            }
+
+            var orderResponse = _mapper.Map<BidResponse>(bid);
 
             return orderResponse;
         }

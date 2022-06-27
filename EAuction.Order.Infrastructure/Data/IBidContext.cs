@@ -5,6 +5,8 @@ namespace EAuction.Order.Infrastructure.Data
 {
     public interface IBidContext
     {   
-        IMongoCollection<Bid> Bids { get; set; }       
+        IMongoCollection<Bid> Bids { get; set; }
+
+        IMongoCollection<Product> Products { get; set; }
     }
 }

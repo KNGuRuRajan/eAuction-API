@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using EAuction.APIGateway.Data.Abstractions;
 using EAuction.APIGateway.Models;
 using EAuction.APIGateway.Repositories.Abstractions;
+using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 
 namespace EAuction.APIGateway.Repositories
@@ -33,8 +34,8 @@ namespace EAuction.APIGateway.Repositories
             return result;
         }       
 
-        public async Task Create(User user)
-        {
+        public async Task<User> Create(User user)
+        {   
             var result = await _context.Users.Find(p => p.Email.ToLower() == user.Email.ToLower()).FirstOrDefaultAsync();
             if (result == null)
             {
@@ -42,8 +43,10 @@ namespace EAuction.APIGateway.Repositories
             }
             else
             {
-                throw new Exception("User already exist...");
+                return null;
             }
+
+            return user;
         }
     }
 }

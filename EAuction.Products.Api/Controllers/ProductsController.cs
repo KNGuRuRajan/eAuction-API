@@ -30,21 +30,21 @@ namespace EAuction.Products.Api.Controllers
         #endregion
         #region CRUD_Actions
                
-        [HttpGet("GetAllProducts")]
+        [HttpPost("GetAllProducts")]
         [ProducesResponseType(typeof(Product), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
+        public async Task<ActionResult<IEnumerable<Product>>> GetProducts([FromBody] SearchParam searchParam)
         {
-            var products = await _productRepository.GetProducts();
+            var products = await _productRepository.GetProducts(searchParam);
 
             return Ok(products);
         }
-        [HttpGet("GetProductsUploadedBy/{emailId}")]        
+        [HttpPost("GetProductsUploadedBy")]        
         [ProducesResponseType(typeof(Product), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult<IEnumerable<Product>>> GetProductsUploadedBy(string emailId)
+        public async Task<ActionResult<ProductResponse>> GetProductsUploadedBy([FromBody] SearchParam searchParam)
         {
-            var products = await _productRepository.GetProductsUploadedBy(emailId);
+            var response = await _productRepository.GetProductsUploadedBy(searchParam);
 
-            return Ok(products);
+            return Ok(response);
         }
 
         [HttpGet("GetProduct/{id}")]        

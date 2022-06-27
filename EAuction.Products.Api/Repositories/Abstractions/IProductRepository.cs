@@ -8,11 +8,11 @@ namespace EAuction.Products.Api.Repositories.Abstractions
 {
     public interface IProductRepository
     {
-        Task<IEnumerable<Product>> GetProducts();
-        Task<IEnumerable<Product>> GetProductsUploadedBy(string mailId);
+        Task<ProductResponse> GetProducts(SearchParam searchParam);
+        Task<ProductResponse> GetProductsUploadedBy(SearchParam searchParam);
         Task<Product> GetProduct(string id);
         Task Create(Product product);
         Task<bool> Update(Product product);
-        Task<bool> Delete(string id);
+        Task<ProductResponse> Delete(string id);
     }
 }

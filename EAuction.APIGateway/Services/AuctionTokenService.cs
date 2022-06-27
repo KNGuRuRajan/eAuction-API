@@ -13,7 +13,7 @@ namespace EAuction.APIGateway.Services
         {
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("my_eauction_app_secret_key"));
             var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256Signature);
-            var expirationDate = DateTime.UtcNow.AddMinutes(15);
+            var expirationDate = DateTime.UtcNow.AddMinutes(30);
 
             var claims = new[]
             {

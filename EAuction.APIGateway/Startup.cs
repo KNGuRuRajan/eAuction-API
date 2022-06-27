@@ -68,20 +68,18 @@ namespace EAuction.APIGateway
 
             services.AddCors(o => o.AddPolicy("CorsPolicy", builder =>
             {
-                builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader().AllowCredentials().WithOrigins("http://localhost:3000");
+                builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader().AllowAnyOrigin();
             }));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "EAuction.APIGateway v1"));
-            } 
-            
+            app.UseDeveloperExceptionPage();
+            app.UseSwagger();
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "EAuction.APIGateway v1"));
+           // app.UseHsts();
+          //  app.UseHttpsRedirection();
             app.UseRouting();
 
             app.UseAuthorization();

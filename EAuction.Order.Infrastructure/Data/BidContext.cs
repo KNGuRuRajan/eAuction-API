@@ -4,8 +4,7 @@ using EAuction.Order.Infrastructure.Settings;
 using MongoDB.Driver;
 
 namespace EAuction.Order.Infrastructure.Data
-{
-    public class BidContext : IBidContext
+{    public class BidContext : IBidContext
     {
         public BidContext(IBidDatabaseSettings settings)
         {
@@ -13,7 +12,10 @@ namespace EAuction.Order.Infrastructure.Data
             var database = client.GetDatabase(settings.DatabaseName);
 
             Bids = database.GetCollection<Bid>(settings.CollectionName);
+            Products = database.GetCollection<Product>("Products");
         }
-        public IMongoCollection<Bid> Bids { get; set; }        
+        public IMongoCollection<Bid> Bids { get; set; }
+
+        public IMongoCollection<Product> Products { get; set; }
     }
 }

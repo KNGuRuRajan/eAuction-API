@@ -3,11 +3,11 @@
     {
       //Producst API
       "DownstreamPathTemplate": "/api/v1/Products/CreateProduct",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 36886
+          "Host": "auction-product.azurewebsites.net",
+          "Port": 443
         }
       ],
       "AuthenticationOptions": {
@@ -19,11 +19,11 @@
     },
     {
       "DownstreamPathTemplate": "/api/v1/Products/GetProductsUploadedBy",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 36886
+          "Host": "auction-product.azurewebsites.net",
+          "Port": 443
         }
       ],
       "AuthenticationOptions": {
@@ -35,11 +35,11 @@
     },
     {
       "DownstreamPathTemplate": "/api/v1/Products/GetAllProducts",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 36886
+          "Host": "auction-product.azurewebsites.net",
+          "Port": 443
         }
       ],
       "AuthenticationOptions": {
@@ -51,11 +51,11 @@
     },
     {
       "DownstreamPathTemplate": "/api/v1/Products/GetProduct/{id}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 36886
+          "Host": "auction-product.azurewebsites.net",
+          "Port": 443
         }
       ],
       "AuthenticationOptions": {
@@ -67,11 +67,11 @@
     },
     {
       "DownstreamPathTemplate": "/api/v1/Products/UpdateProduct/{id}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 36886
+          "Host": "auction-product.azurewebsites.net",
+          "Port": 443
         }
       ],
       "AuthenticationOptions": {
@@ -83,11 +83,11 @@
     },
     {
       "DownstreamPathTemplate": "/api/v1/Products/DeleteProduct/{productId}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 36886
+          "Host": "auction-product.azurewebsites.net",
+          "Port": 443
         }
       ],
       "AuthenticationOptions": {
@@ -100,11 +100,11 @@
     //-Bid API
     {
       "DownstreamPathTemplate": "/api/v1/Bid/PlaceBid",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 59655
+          "Host": "auction-bid.azurewebsites.net",
+          "Port": 443
         }
       ],
       "AuthenticationOptions": {
@@ -116,11 +116,11 @@
     },
     {
       "DownstreamPathTemplate": "/api/v1/Bid/GetBidsByProductId/{productId}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 59655
+          "Host": "auction-bid.azurewebsites.net",
+          "Port": 443
         }
       ],
       "AuthenticationOptions": {
@@ -132,11 +132,11 @@
     },
     {
       "DownstreamPathTemplate": "/api/v1/Bid/GetBidHistory/{emailId}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 59655
+          "Host": "auction-bid.azurewebsites.net",
+          "Port": 443
         }
       ],
       "AuthenticationOptions": {
@@ -148,11 +148,11 @@
     },
     {
       "DownstreamPathTemplate": "/api/v1/Bid/UpdateBid/{productId}/{buyerEmailId}/{newBidAmount}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 59655
+          "Host": "auction-bid.azurewebsites.net",
+          "Port": 443
         }
       ],
       "AuthenticationOptions": {
@@ -164,11 +164,11 @@
     },
     {
       "DownstreamPathTemplate": "/api/v1/Bid/UpdateBidStatus/{productId}/{buyerEmailId}/{bidStatus}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 59655
+          "Host": "auction-bid.azurewebsites.net",
+          "Port": 443
         }
       ],
       "AuthenticationOptions": {

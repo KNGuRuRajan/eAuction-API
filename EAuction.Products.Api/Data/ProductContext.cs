@@ -11,7 +11,6 @@ namespace EAuction.Products.Api.Data
         {       
             var client = new MongoClient(settings.ConnectionString);
             var database = client.GetDatabase(settings.DatabaseName);
-
             Products = database.GetCollection<Product>(settings.CollectionName);
             Bids = database.GetCollection<Bid>("Bids");
             // ProductContextSeed.SeedData(Products);

@@ -19,10 +19,17 @@ namespace EAuction.Order.Infrastructure.Repositories
             _context = context;
         }
 
-        public async Task<IEnumerable<Bid>> GetBidsByProductId(string productId)
+        public async Task<IEnumerable<Bid>> GetBidsByBuyerEmailId(string emailId)
         {
-            var bidList = await _context.Bids.Find(o => o.ProductId == productId).ToListAsync();
-            return bidList;
+            var bidList = await _context.Bids.Find(o => o.Email == emailId).ToListAsync();
+            List<Bid> updatedBidList = new List<Bid>();
+            foreach (var bid in bidList)
+            {
+                bid.ProductId = _context.Products.Find(o => o.Id == bid.ProductId).FirstOrDefault().ProductName.ToString();
+                updatedBidList.Add(bid);
+            }
+
+            return updatedBidList;
         }
 
         public async Task<Bid> SendBid(Bid bid)
@@ -35,7 +42,7 @@ namespace EAuction.Order.Infrastructure.Repositories
             }
             else
             {
-                throw new Exception("More than one bid on a same product is not allowed..");
+                return null;
             }
 
             return bid;
@@ -43,8 +50,9 @@ namespace EAuction.Order.Infrastructure.Repositories
 
         public async Task<IEnumerable<Bid>> GetBids(string productId)
         {
-            var result = await _context.Bids.Find(p => p.ProductId == productId).ToListAsync();
-            return result;
+            var result = await _context.Bids.Find(p => p.ProductId == productId).SortBy(e => e.BidAmount).ToListAsync();
+            var sorteredList = result.OrderBy(o => o.BidAmount).ToList();
+            return sorteredList;
         }
 
         public async Task<bool> UpdateBidAmount(string productId, string buyerEmailId, decimal newBidAmount)
@@ -58,6 +66,39 @@ namespace EAuction.Order.Infrastructure.Repositories
                 var updatedResult = await _context.Bids.ReplaceOneAsync(filter: g => g.Id == foundBid.Id, replacement: foundBid);
                 result = updatedResult.IsAcknowledged && updatedResult.ModifiedCount > 0;
             }
+
+            return result;
+        }
+
+
+        public async Task<bool> UpdateBidStatus(string productId, string buyerEmailId, string bidStatus)
+        {  
+            var result = false;
+            var foundBid = await _context.Bids.Find(p => p.ProductId == productId && p.Email == buyerEmailId).FirstOrDefaultAsync();           
+
+            if (foundBid != null)
+            {
+                foundBid.Comment = bidStatus;
+                foundBid.BidStatus = bidStatus;
+                var updatedResult = await _context.Bids.ReplaceOneAsync(filter: g => g.Id == foundBid.Id, replacement: foundBid);
+                result = updatedResult.IsAcknowledged && updatedResult.ModifiedCount > 0;
+            }
+
+            if (bidStatus.ToLower() == "accepted")
+            {
+                List<Bid> rejectedBids = await _context.Bids.Find(p => p.ProductId == productId && p.Email != buyerEmailId).ToListAsync();
+
+                if (rejectedBids != null && rejectedBids.Count > 0)
+                {
+                    foreach (var rejectedBid in rejectedBids)
+                    {
+                        rejectedBid.Comment = "Rejected";
+                        rejectedBid.BidStatus = "Rejected";
+                        var updatedResult = await _context.Bids.ReplaceOneAsync(filter: g => g.Id == rejectedBid.Id, replacement: rejectedBid);                     
+                    }
+                }
+            }
+
 
             return result;
         }

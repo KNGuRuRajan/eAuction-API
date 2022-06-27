@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using EAuction.Products.Api.Data.Abstractions;
 using EAuction.Products.Api.Entities;
 using EAuction.Products.Api.Repositories.Abstractions;
+using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 
 namespace EAuction.Products.Api.Repositories
@@ -17,16 +19,48 @@ namespace EAuction.Products.Api.Repositories
             _context = context;
         }
 
-        public async Task<IEnumerable<Product>> GetProducts()
+        public async Task<ProductResponse> GetProducts(SearchParam searchParam)
         {
-            var result = await _context.Products.Find(p => true && p.BidEndDate >= DateTime.Now).ToListAsync();
-            return result;
+            List<Product> products = new List<Product>();
+            ProductResponse response = new ProductResponse();
+            long total = 0;
+
+            searchParam.Page = searchParam.Page == 0 ? 1 : searchParam.Page; ;
+            if (string.IsNullOrEmpty(searchParam.SearchText))
+            {
+                total = await _context.Products.Find(p => true).CountDocumentsAsync();                
+                products = await _context.Products.Find(p => true).Skip((searchParam.Page - 1) * searchParam.PerPage).Limit(searchParam.PerPage).ToListAsync();
+            }
+            else
+            {
+                total = await _context.Products.Find(p => true && p.ProductName.Contains(searchParam.SearchText)).CountDocumentsAsync();
+                products = await _context.Products.Find(p => true && p.ProductName.ToLower().Contains(searchParam.SearchText.ToLower())).Skip((searchParam.Page - 1) * searchParam.PerPage).Limit(searchParam.PerPage).ToListAsync();
+            }
+
+            var sorteredList = searchParam.SortOrder == "lowest" ? products.OrderBy(o => o.StartingPrice).ToList() : products.OrderByDescending(o => o.StartingPrice).ToList();
+            return new ProductResponse() { Page = searchParam.Page, Total = total, IsSucuess = true, ErrorMessage = string.Empty, Products = sorteredList, LastPage = (total / searchParam.PerPage) + 1 };
         }
 
-        public async Task<IEnumerable<Product>> GetProductsUploadedBy(string mailId)
-        {     
-            var result = await _context.Products.Find(p => p.Email == mailId).ToListAsync();
-            return result;
+        public async Task<ProductResponse> GetProductsUploadedBy(SearchParam searchParam)
+        {  
+            List<Product> products = new List<Product>();
+            ProductResponse response = new ProductResponse();
+            long total = 0;
+            searchParam.Page = searchParam.Page == 0 ? 1 : searchParam.Page;
+            if (string.IsNullOrEmpty(searchParam.SearchText))
+            {
+                total = await _context.Products.Find(p => p.Email == searchParam.EmailId).CountDocumentsAsync();
+                products = await _context.Products.Find(p => p.Email == searchParam.EmailId).Skip((searchParam.Page - 1) * searchParam.PerPage).Limit(searchParam.PerPage).ToListAsync();
+            }
+            else
+            {
+                total = await _context.Products.Find(p => p.Email == searchParam.EmailId && p.ProductName.ToLower().Contains(searchParam.SearchText.ToLower())).CountDocumentsAsync();
+                products = await _context.Products.Find(p => p.Email == searchParam.EmailId && p.ProductName.ToLower().Contains(searchParam.SearchText.ToLower())).Skip((searchParam.Page -1) * searchParam.PerPage).Limit(searchParam.PerPage).ToListAsync();
+            }
+
+            var sorteredList = searchParam.SortOrder == "lowest" ? products.OrderBy(o => o.StartingPrice).ToList() : products.OrderByDescending(o => o.StartingPrice).ToList();
+
+            return new ProductResponse() { Page = searchParam.Page, Total = total, IsSucuess= true, ErrorMessage = string.Empty, Products = sorteredList, LastPage = (total / searchParam.PerPage) + 1 };
         }
 
         public async Task<Product> GetProduct(string id)
@@ -54,7 +88,7 @@ namespace EAuction.Products.Api.Repositories
             return result;
         }
 
-        public async Task<bool> Delete(string id)
+        public async Task<ProductResponse> Delete(string id)
         {
             var result = false;
             var placedBids = _context.Bids.CountDocuments(b => b.ProductId == id);
@@ -67,7 +101,7 @@ namespace EAuction.Products.Api.Repositories
                 {
                     if (product.BidEndDate < DateTime.Now)
                     {
-                        throw new Exception("The selected product cannot be deleted because Bid End date is expired");
+                        return new ProductResponse() { StatusCode = 400, IsSucuess = false, ErrorMessage = "The selected product cannot be deleted because Bid End date is expired" };
                     }
                     else
                     {
@@ -79,10 +113,11 @@ namespace EAuction.Products.Api.Repositories
             }
             else
             {
-                throw new Exception("The selected product has valid bids. It cannot be deleted!!");
+                return new ProductResponse() { StatusCode = 400, IsSucuess = false, ErrorMessage = "The selected product has valid bids. It cannot be deleted!!" };
+                
             }
-          
-            return result ;
+
+            return new ProductResponse() { IsSucuess = result, ErrorMessage = string.Empty };
         }
     }
 }

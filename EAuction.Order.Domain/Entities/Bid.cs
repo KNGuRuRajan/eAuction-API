@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using EAuction.Order.Domain.Entities.Base;
 using MongoDB.Bson;
+using MongoDB.Bson.Serialization;
 using MongoDB.Bson.Serialization.Attributes;
 
 namespace EAuction.Order.Domain.Entities
@@ -30,7 +31,12 @@ namespace EAuction.Order.Domain.Entities
 
         [Required(ErrorMessage = "Product Id cannot be empty")]
         public string ProductId { get; set; }
+     
+        [BsonRepresentation(BsonType.Decimal128)]
         public decimal BidAmount { get; set; }
+
+        public string BidStatus { get; set; }
+        public string Comment { get; set; }
         public DateTime CreatedAt { get; set; }
         
     }
