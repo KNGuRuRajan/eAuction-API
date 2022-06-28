@@ -1,0 +1,191 @@
+E-Auction Application :
+
+Modules
+==========================================
+User module
+  New User
+  Login
+
+Buyer module
+  Dashboard
+  View Product Details - uploaded any seller
+  Bid Product
+  Bid History
+
+Seller module
+  Dashboard
+  Add Product
+  Uploaded Products
+  View Bids
+  Accept & Reject functionality
+
+Search
+Pagination  
+Producted route
+JWT token implemented (security prospective) (ocelot json)
+Implemented basic validations 
+==========================================
+Microservice architecture, repositary pattern, common API Gateway
+-----------------------------------------------------------------
+src
+├── ApiGateway
+|   └── EAuction.ApiGateway
+├── Services                    
+│   ├── Common
+    |   └── EventBustRabbitMQ
+    ├── Bid
+    |   ├── EAuction.Bid.Application
+    |   ├── EAuction.Bid.Domain
+    |   ├── EAuction.Bid.Infrastructure
+    |   └── EAuction.Bid.Api
+    ├── Product
+       └── EAuction.Products.Api│   
+
+==========================================
+
+
+E-Auction Application :
+
+An auction application that I created with .Net 5 and microservices architecture, where you can bid on products with others.
+
+Microservices - also known as the microservice architecture - is an architectural style that structures an application as a collection of services that are. Highly maintainable and testable. Loosely coupled. Independently deployable. Organized around business capabilities.
+
+Repositary Pattern :
+Repository Pattern is an abstraction of the Data Access Layer. It hides the details of how exactly the data is saved or retrieved from the underlying data source. The details of how the data is stored and retrieved is in the respective repository.
+
+It centralizes data logic or business logic and service logic.
+It gives a substitution point for the unit tests.
+Provides a flexible architecture.
+If you want to modify the data access logic or business access logic, you don't need to change the repository logic.
+
+
+Command Query Responsibility Segregation (CQRS)
+Query that retrieves data from multiple services in a microservice architecture
+
+Define a view database, which is a read-only replica that is designed to support that query. The application keeps the replica up to data by subscribing to Domain events published by the service that own the data.
+
+An auction application that I created with .Net 5 and microservices architecture, where you can bid on products with others.
+Whats Including In This Repository
+Product microservice which includes;
+
+ASP.NET Core Web API application
+REST API principles, CRUD operations
+MongoDB database connection and containerization
+Repository Pattern Implementation
+Swagger Open API implementation
+Sourcing microservice whic includes;
+
+ASP.NET Web API application
+REST API principles, CRUD operations
+MongoDB database connection and containerization
+Repository Pattern Implementation
+Swagger Open API implementation
+ASP.NET gRPC Server application
+Microservices Communication
+
+Sync inter-service gRPC Communication
+Async Microservices Communication with RabbitMQ Message-Broker Service
+Using RabbitMQ Publish/Subscribe Topic Exchange Model
+Order Microservice
+
+Implementing DDD, CQRS, and Clean Architecture with using Best Practices
+Developing CQRS with using MediatR, FluentValidation and AutoMapper packages
+SqlServer database connection and containerization
+Using Entity Framework Core ORM and auto migrate to SqlServer when application startup
+API Gateway Ocelot Microservice
+
+Implement API Gateways with Ocelot
+Sample microservices/containers to reroute through the API Gateways
+Run multiple different API Gateway container types
+Docker Compose establishment with all microservices on docker;
+
+Containerization of microservices
+Containerization of databases
+Override Environment variables
+
+
+pm2 serve /home/site/wwwroot --no-daemon  (working)
+pm2 serve /home/site/wwwroot/build --no-daemon --spa
+pm2 serve /home/site/wwwroot --no-daemon --spa  (perfectly working)
+
+https://iihtedu.cloud.bilder.ai/
+
+pKx37_zs
+//    "build": "CI= react-scripts build",
+
+http://auction-product.azurewebsites.net/swagger/index.html
+http://auction-bid.azurewebsites.net/swagger/index.html
+https://auction-api-gateway.azurewebsites.net/swagger/index.html
+
+
+User
+http://localhost:33226/validateuser/{email}/{password}
+http://localhost:33226/createuser
+
+Product
+http://localhost:33226/e-auction/api/v1/seller/add-product
+http://localhost:33226/e-auction/api/v1/seller/get-products/{emailId}
+http://localhost:33226/e-auction/api/v1/seller/get-all-products
+http://localhost:33226/e-auction/api/v1/seller/get-product/{id}
+http://localhost:33226/e-auction/api/v1/seller/update/{productId}
+http://localhost:33226/e-auction/api/v1/seller/delete/{productId}
+
+http://localhost:33226/e-auction/api/v1/seller/get-products
+
+
+bc_wallet_220621_hwrttnt6zg@BuilderCloudProvisioning.onmicrosoft.com
+MdKIvtWe!
+https://auction-bid.azurewebsites.net
+https://auction-product.azurewebsites.net
+
+
+Bids
+http://localhost:33226/e-auction/api/v1/buyer/place-bid
+http://localhost:33226/e-auction/api/v1/seller/show-bids/{productId}
+http://localhost:33226/e-auction/api/v1/buyer/update-bid/{productId}/{buyerEmailld}/{newBidAmount}
+
+http://localhost:33226/e-auction/api/v1/seller/updatebidstatus
+
+http://localhost:33226/e-auction/api/v1/seller/updatebidstatus/627fbf0e454e9a63f8299d80/buyer100@auction.com/Accepted
+"/e-auction/api/v1/seller/updatebidstatus/{productId}/{buyerEmailId}/{bidStatus}",
+
+http://localhost:33226/e-auction/api/v1/seller/show-bids/6298b0646902caf8b079ca47
+
+http://localhost:33226/e-auction/api/v1/buyer/bid-history/buyer100@auction.com
+https://qappdesign.com/code/paging-mongodb-avoid-poor-performance/
+
+<td  {i === 0 ? 'style={{color: "green"}}' : 'style={{color: "black"}}'>{item.bidAmount} ₹</td>
+
+
+ {i === 0 && (<td style={{color: "green"}}>{item.bidAmount} ₹</td>)}
+                  {i === bids.length - 1 && (<td style={{color: "red"}}>{item.bidAmount} ₹</td>)}                  
+
+1. registering new user - done
+2. login - done
+3. add product - done  3. Bid end date should be future date, else throw a custom exception in such case
+4. delete product - done
+5. view bids - done
+6. bid on product - in progress (1. If bid is placed after the bid end date, it must throw a custom exception. handle in UI)
+7. view bid history - not yet started
+8. update bid amount - not yet started
+9. cleanup not starte yet.
+10. validations - not yet started
+
+
+Prod URLS:
+Product
+https://auction-product.azurewebsites.net/api/v1/Products/GetAllProducts
+Bid
+https://auction-bid.azurewebsites.net/api/v1/Bid/GetBidsByProductId/62a758fec840a6f02502fd71
+https://auction-bid.azurewebsites.net/swagger/index.html
+Auth
+https://auction-api-gateway.azurewebsites.net/Auth/validateuser
+
+
+https://auction-api-gateway.azurewebsites.net/e-auction/api/v1/seller/get-all-products
+https://auction-api-gateway.azurewebsites.net/e-auction/api/v1/seller/get-all-products
+
+
+
+
+

@@ -1,0 +1,63 @@
+pm2 serve /home/site/wwwroot --no-daemon  (working)
+pm2 serve /home/site/wwwroot/build --no-daemon --spa
+pm2 serve /home/site/wwwroot --no-daemon --spa  (perfectly working)
+
+http://auction-product.azurewebsites.net/swagger/index.html
+http://auction-bid.azurewebsites.net/swagger/index.html
+https://auction-api-gateway.azurewebsites.net/swagger/index.html
+
+User
+http://localhost:33226/validateuser/{email}/{password}
+http://localhost:33226/createuser
+
+Product
+http://localhost:33226/e-auction/api/v1/seller/add-product
+http://localhost:33226/e-auction/api/v1/seller/get-products/{emailId}
+http://localhost:33226/e-auction/api/v1/seller/get-all-products
+http://localhost:33226/e-auction/api/v1/seller/get-product/{id}
+http://localhost:33226/e-auction/api/v1/seller/update/{productId}
+http://localhost:33226/e-auction/api/v1/seller/delete/{productId}
+
+http://localhost:33226/e-auction/api/v1/seller/get-products
+https://auction-bid.azurewebsites.net
+https://auction-product.azurewebsites.net
+Bids
+http://localhost:33226/e-auction/api/v1/buyer/place-bid
+http://localhost:33226/e-auction/api/v1/seller/show-bids/{productId}
+http://localhost:33226/e-auction/api/v1/buyer/update-bid/{productId}/{buyerEmailld}/{newBidAmount}
+
+http://localhost:33226/e-auction/api/v1/seller/updatebidstatus
+
+http://localhost:33226/e-auction/api/v1/seller/updatebidstatus/627fbf0e454e9a63f8299d80/buyer100@auction.com/Accepted
+"/e-auction/api/v1/seller/updatebidstatus/{productId}/{buyerEmailId}/{bidStatus}",
+
+http://localhost:33226/e-auction/api/v1/seller/show-bids/6298b0646902caf8b079ca47
+
+http://localhost:33226/e-auction/api/v1/buyer/bid-history/buyer100@auction.com
+https://qappdesign.com/code/paging-mongodb-avoid-poor-performance/
+
+1. registering new user - done
+2. login - done
+3. add product - done  3. Bid end date should be future date, else throw a custom exception in such case
+4. delete product - done
+5. view bids - done
+6. bid on product - in progress (1. If bid is placed after the bid end date, it must throw a custom exception. handle in UI)
+7. view bid history - not yet started
+8. update bid amount - not yet started
+9. cleanup not starte yet.
+10. validations - not yet started
+
+Prod URLS:
+Product
+https://auction-product.azurewebsites.net/api/v1/Products/GetAllProducts
+Bid
+https://auction-bid.azurewebsites.net/api/v1/Bid/GetBidsByProductId/62a758fec840a6f02502fd71
+https://auction-bid.azurewebsites.net/swagger/index.html
+Auth
+https://auction-api-gateway.azurewebsites.net/Auth/validateuser
+https://auction-api-gateway.azurewebsites.net/e-auction/api/v1/seller/get-all-products
+https://auction-api-gateway.azurewebsites.net/e-auction/api/v1/seller/get-all-products
+
+
+
+
