@@ -1,0 +1,377 @@
+[{
+  "_id": {
+    "$oid": "627fbf0e454e9a63f8299d7e"
+  },
+  "ProductName": "Xiaomi",
+  "ShortDescription": "Phone",
+  "LongDescription": "iphone",
+  "Category": 1,
+  "StartingPrice": "1200",
+  "BidEndDate": {
+    "$date": {
+      "$numberLong": "1669573800000"
+    }
+  },
+  "FirstName": "YUVAN103",
+  "LastName": "SHANKAR",
+  "Address": "TEST ADDRESS",
+  "City": "CHENNAI",
+  "State": "TN",
+  "Pin": "78393829",
+  "Phone": 908787898,
+  "Email": "seller100@auction.com"
+},{
+  "_id": {
+    "$oid": "627fbf0e454e9a63f8299d7f"
+  },
+  "ProductName": "Samsung",
+  "ShortDescription": "Phone",
+  "LongDescription": "iphone",
+  "Category": 2,
+  "StartingPrice": "1200",
+  "BidEndDate": {
+    "$date": {
+      "$numberLong": "1665772200000"
+    }
+  },
+  "FirstName": "YUVAN101",
+  "LastName": "SHANKAR",
+  "Address": "TEST ADDRESS",
+  "City": "CHENNAI",
+  "State": "TN",
+  "Pin": "78393829",
+  "Phone": 908787898,
+  "Email": "seller100@auction.com"
+},{
+  "_id": {
+    "$oid": "627fbf0e454e9a63f8299d80"
+  },
+  "ProductName": "Huawei",
+  "ShortDescription": "Phone",
+  "LongDescription": "iphone",
+  "Category": 1,
+  "StartingPrice": "1200",
+  "BidEndDate": {
+    "$date": {
+      "$numberLong": "1663266600000"
+    }
+  },
+  "FirstName": "YUVAN102",
+  "LastName": "SHANKAR",
+  "Address": "TEST ADDRESS",
+  "City": "CHENNAI",
+  "State": "TN",
+  "Pin": "78393829",
+  "Phone": 908787898,
+  "Email": "seller100@auction.com"
+},{
+  "_id": {
+    "$oid": "627fbf72cb914b3f3cf318e0"
+  },
+  "ProductName": "IPhone",
+  "ShortDescription": "Painting",
+  "LongDescription": "iphone",
+  "Category": 2,
+  "StartingPrice": "1200",
+  "BidEndDate": {
+    "$date": {
+      "$numberLong": "1648665000000"
+    }
+  },
+  "FirstName": "YUVAN100",
+  "LastName": "SHANKAR",
+  "Address": "TEST ADDRESS",
+  "City": "CHENNAI",
+  "State": "TN",
+  "Pin": "78393829",
+  "Phone": 908787898,
+  "Email": "seller100@auction.com"
+},{
+  "_id": {
+    "$oid": "6298afe26902caf8b079ca45"
+  },
+  "ProductName": "Samsung",
+  "ShortDescription": "Phone",
+  "LongDescription": "iphone",
+  "Category": 2,
+  "StartingPrice": "1200",
+  "BidEndDate": {
+    "$date": {
+      "$numberLong": "1665772200000"
+    }
+  },
+  "FirstName": "YUVAN101",
+  "LastName": "SHANKAR",
+  "Address": "TEST ADDRESS",
+  "City": "CHENNAI",
+  "State": "TN",
+  "Pin": "78393829",
+  "Phone": {
+    "$numberLong": "9987878767"
+  },
+  "Email": "seller100@auction.com"
+},{
+  "_id": {
+    "$oid": "6298b02a6902caf8b079ca46"
+  },
+  "ProductName": "Samsung",
+  "ShortDescription": "Phone",
+  "LongDescription": "iphone",
+  "Category": 2,
+  "StartingPrice": "1200",
+  "BidEndDate": {
+    "$date": {
+      "$numberLong": "1665772200000"
+    }
+  },
+  "FirstName": "YUVAN101",
+  "LastName": "SHANKAR",
+  "Address": "TEST ADDRESS",
+  "City": "CHENNAI",
+  "State": "TN",
+  "Pin": "78393829",
+  "Phone": {
+    "$numberLong": "9987878767"
+  },
+  "Email": "seller100@auction.com"
+},{
+  "_id": {
+    "$oid": "6298b0646902caf8b079ca47"
+  },
+  "ProductName": "Samsung",
+  "ShortDescription": "Phone",
+  "LongDescription": "iphone",
+  "Category": 2,
+  "StartingPrice": "1200",
+  "BidEndDate": {
+    "$date": {
+      "$numberLong": "1665772200000"
+    }
+  },
+  "FirstName": "YUVAN101",
+  "LastName": "SHANKAR",
+  "Address": "TEST ADDRESS",
+  "City": "CHENNAI",
+  "State": "TN",
+  "Pin": "78393829",
+  "Phone": {
+    "$numberLong": "9987878767"
+  },
+  "Email": "seller100@auction.com"
+},{
+  "_id": {
+    "$oid": "629f25233461cb2fce29276e"
+  },
+  "ProductName": "portable chair",
+  "ShortDescription": "chair",
+  "LongDescription": "portable and comfortable",
+  "Category": 3,
+  "StartingPrice": "250",
+  "BidEndDate": {
+    "$date": {
+      "$numberLong": "1654713000000"
+    }
+  },
+  "FirstName": "Yogesh",
+  "LastName": "Joseph",
+  "Address": "1 st street",
+  "City": "gowrivakkam",
+  "State": "tamilnadu",
+  "Pin": "600073",
+  "Phone": {
+    "$numberLong": "9451214544"
+  },
+  "Email": "yogesh@hotmail.com"
+},{
+  "_id": {
+    "$oid": "62a3a33e2b2abed04676243c"
+  },
+  "ProductName": "Redmi",
+  "ShortDescription": "Redmi Karthik Testing",
+  "LongDescription": "Redmi Karthik Testing",
+  "Category": 2,
+  "StartingPrice": "50",
+  "BidEndDate": {
+    "$date": {
+      "$numberLong": "1656527400000"
+    }
+  },
+  "FirstName": "KARTHIK",
+  "LastName": "Testing",
+  "Address": "11, Rainbowcity",
+  "City": "Tamilnadu",
+  "State": "Tamilnadu",
+  "Pin": "641035",
+  "Phone": {
+    "$numberLong": "9865842585"
+  },
+  "Email": "karthik@gmail.com"
+},{
+  "_id": {
+    "$oid": "62a42f0dce6eb6271de1e436"
+  },
+  "ProductName": "portable chair",
+  "ShortDescription": "chair",
+  "LongDescription": "portable and comfortable",
+  "Category": 3,
+  "StartingPrice": "2600",
+  "BidEndDate": {
+    "$date": {
+      "$numberLong": "1656441000000"
+    }
+  },
+  "FirstName": "Yogesh",
+  "LastName": "Joseph",
+  "Address": "1 st street",
+  "City": "gowrivakkam",
+  "State": "tamilnadu",
+  "Pin": "600073",
+  "Phone": {
+    "$numberLong": "4569874564"
+  },
+  "Email": "yogesh@gmail.com"
+},{
+  "_id": {
+    "$oid": "62a758fec840a6f02502fd71"
+  },
+  "ProductName": "TEST PRODUCT NAME",
+  "ShortDescription": "SHORT DESCRIPTION",
+  "LongDescription": "LONG DESCRIPTION",
+  "Category": 1,
+  "StartingPrice": "33345",
+  "BidEndDate": {
+    "$date": {
+      "$numberLong": "1656547200000"
+    }
+  },
+  "FirstName": "SELLER100",
+  "LastName": "BBBBBBBB",
+  "Address": "Address",
+  "City": "City",
+  "State": "State",
+  "Pin": "600090",
+  "Phone": {
+    "$numberLong": "9809876567"
+  },
+  "Email": "seller100@auction.com"
+},{
+  "_id": {
+    "$oid": "62a84584c840a6f02502fd77"
+  },
+  "ProductName": "TEST PRODUCT NAME",
+  "ShortDescription": "SHORT DESCRIPTION",
+  "LongDescription": "LONG DESCRIPTION",
+  "Category": 1,
+  "StartingPrice": "5000",
+  "BidEndDate": {
+    "$date": {
+      "$numberLong": "1655510400000"
+    }
+  },
+  "FirstName": "AAAAAAAA",
+  "LastName": "asdfasdf",
+  "Address": "Address",
+  "City": "City",
+  "State": "State",
+  "Pin": "600090",
+  "Phone": {
+    "$numberLong": "9809876567"
+  },
+  "Email": "seller100@auction.com"
+},{
+  "_id": {
+    "$oid": "62ac0c23a2528b807a983bb5"
+  },
+  "ProductName": "test product 1",
+  "ShortDescription": "test product 1 short description",
+  "LongDescription": "test product 1 long description",
+  "Category": 1,
+  "StartingPrice": "8000",
+  "BidEndDate": {
+    "$date": {
+      "$numberLong": "1656527400000"
+    }
+  },
+  "FirstName": "Yogesh",
+  "LastName": "Joseph",
+  "Address": "test street",
+  "City": "test city",
+  "State": "test state",
+  "Pin": "456677",
+  "Phone": {
+    "$numberLong": "4568797785"
+  },
+  "Email": "yogesh@hotmail.com"
+},{
+  "_id": {
+    "$oid": "62aed25ca2031b8df4279cf7"
+  },
+  "ProductName": "Apple IPhone",
+  "ShortDescription": "Short Des",
+  "LongDescription": "Detailed Desc",
+  "Category": 2,
+  "StartingPrice": "55",
+  "BidEndDate": {
+    "$date": {
+      "$numberLong": "1656527400000"
+    }
+  },
+  "FirstName": "Seller",
+  "LastName": "Account",
+  "Address": "Testing",
+  "City": "Test",
+  "State": "Test",
+  "Pin": "454545",
+  "Phone": {
+    "$numberLong": "7894561233"
+  },
+  "Email": "seller@gmail.com"
+},{
+  "_id": {
+    "$oid": "62aed294a2031b8df4279cf8"
+  },
+  "ProductName": "Samsung",
+  "ShortDescription": "Short Des",
+  "LongDescription": "Detailed Desc",
+  "Category": 1,
+  "StartingPrice": "45",
+  "BidEndDate": {
+    "$date": {
+      "$numberLong": "1656527400000"
+    }
+  },
+  "FirstName": "Seller",
+  "LastName": "Account",
+  "Address": "Testing",
+  "City": "Test",
+  "State": "Test",
+  "Pin": "454545",
+  "Phone": {
+    "$numberLong": "9876542142"
+  },
+  "Email": "seller@gmail.com"
+},{
+  "_id": {
+    "$oid": "62b059acd1716bb604de4ae0"
+  },
+  "ProductName": "TEST PRODUCT NAME",
+  "ShortDescription": "SHORT DESCRIPTION",
+  "LongDescription": "LONG DESCRIPTION",
+  "Category": 1,
+  "StartingPrice": "5000",
+  "BidEndDate": {
+    "$date": {
+      "$numberLong": "1656547200000"
+    }
+  },
+  "FirstName": "AAAAAAAA",
+  "LastName": "SELLER101",
+  "Address": "Address",
+  "City": "hydrabad",
+  "State": "andra",
+  "Pin": "600090",
+  "Phone": {
+    "$numberLong": "9809876545"
+  },
+  "Email": "seller100@auction.com"
+}]

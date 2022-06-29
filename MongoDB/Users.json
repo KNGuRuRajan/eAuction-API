@@ -1,0 +1,297 @@
+[{
+  "_id": {
+    "$oid": "628788061f4c8ee764b67c98"
+  },
+  "FirstName": "Robert",
+  "LastName": "Keth",
+  "Password": "Pass@12345",
+  "Email": "seller100@auction.com",
+  "RoleId": 1
+},{
+  "_id": {
+    "$oid": "628788441f4c8ee764b67c99"
+  },
+  "FirstName": "Robert",
+  "LastName": "Keth",
+  "Password": "Pass@12345",
+  "Email": "seller101@auction.com",
+  "RoleId": 1
+},{
+  "_id": {
+    "$oid": "628788b81f4c8ee764b67c9a"
+  },
+  "FirstName": "Rishab",
+  "LastName": "Pant",
+  "Password": "Pass@12345",
+  "Email": "buyer100@auction.com",
+  "RoleId": 2
+},{
+  "_id": {
+    "$oid": "628788c81f4c8ee764b67c9b"
+  },
+  "FirstName": "Rishab",
+  "LastName": "Pant",
+  "Password": "Pass@12345",
+  "Email": "buyer101@auction.com",
+  "RoleId": 2
+},{
+  "_id": {
+    "$oid": "62879c32d23b2d2797d08c23"
+  },
+  "FirstName": "SUKLA",
+  "LastName": "NANDA",
+  "Password": "pass@12345",
+  "Email": "seller103@auction.com",
+  "RoleId": 1,
+  "Token": null
+},{
+  "_id": {
+    "$oid": "628c79a6900acb092b3a89dc"
+  },
+  "FirstName": "RAJEEV",
+  "LastName": "BHAI",
+  "Password": "Pass@12345",
+  "Email": "buyer100@auction.com",
+  "RoleId": 0,
+  "Token": "string"
+},{
+  "_id": {
+    "$oid": "62974ca2d25c774dc2b2a9f3"
+  },
+  "FirstName": "Robert",
+  "LastName": "Keth",
+  "Password": "Pass@12345",
+  "Email": "seller500@auction.com",
+  "RoleId": 1,
+  "Token": null
+},{
+  "_id": {
+    "$oid": "62974ccbd25c774dc2b2a9f4"
+  },
+  "FirstName": "Robert",
+  "LastName": "Keth",
+  "Password": "Pass@12345",
+  "Email": "buyer500@auction.com",
+  "RoleId": 2,
+  "Token": null
+},{
+  "_id": {
+    "$oid": "629f1485f74467a49b2ecfac"
+  },
+  "FirstName": "Yogesh",
+  "LastName": "Joseph",
+  "Password": "pass@123",
+  "Email": "yogesh@hotmail.com",
+  "RoleId": 1,
+  "Token": null
+},{
+  "_id": {
+    "$oid": "629f1c36d63328d86e5a5e06"
+  },
+  "FirstName": "Yogesh2",
+  "LastName": "Joseph",
+  "Password": "pass@123",
+  "Email": "yogesh2@hotmail.com",
+  "RoleId": 1,
+  "Token": null
+},{
+  "_id": {
+    "$oid": "629f1c88d63328d86e5a5e07"
+  },
+  "FirstName": "Ramesh",
+  "LastName": "Naren",
+  "Password": "pass@123",
+  "Email": "ramesh@outlook.com",
+  "RoleId": 2,
+  "Token": null
+},{
+  "_id": {
+    "$oid": "629f1e8dd63328d86e5a5e08"
+  },
+  "FirstName": "venkat",
+  "LastName": "sundar",
+  "Password": "pass@123",
+  "Email": "venkat@gmail.com",
+  "RoleId": 1,
+  "Token": null
+},{
+  "_id": {
+    "$oid": "629f2019d63328d86e5a5e09"
+  },
+  "FirstName": "Rajesh",
+  "LastName": "Eswar",
+  "Password": "password123#",
+  "Email": "rajesh@yahoo.com",
+  "RoleId": 2,
+  "Token": null
+},{
+  "_id": {
+    "$oid": "629f25c46a68211e266f41f8"
+  },
+  "FirstName": "naresh",
+  "LastName": "raman",
+  "Password": "password@123",
+  "Email": "naresh@gmail.com",
+  "RoleId": 1,
+  "Token": null
+},{
+  "_id": {
+    "$oid": "62a39197677c6e9e2d5e2a04"
+  },
+  "FirstName": "Karthik",
+  "LastName": "A",
+  "Password": "test1234",
+  "Email": "Karthik@gmail.com",
+  "RoleId": 1,
+  "Token": null
+},{
+  "_id": {
+    "$oid": "62a39ce9d85cf446c59ff992"
+  },
+  "FirstName": "KARTHIK",
+  "LastName": "Aruchsamy",
+  "Password": "test1234",
+  "Email": "buyer@gmail.com",
+  "RoleId": 2,
+  "Token": null
+},{
+  "_id": {
+    "$oid": "62a429b7f73299b7547b6647"
+  },
+  "FirstName": "Yogesh",
+  "LastName": "Joseph",
+  "Password": "password",
+  "Email": "yogesh@hotmail.com",
+  "RoleId": 1,
+  "Token": null
+},{
+  "_id": {
+    "$oid": "62a42e21f73299b7547b6648"
+  },
+  "FirstName": "Yogesh",
+  "LastName": "Joseph",
+  "Password": "password",
+  "Email": "yogesh@gmail.com",
+  "RoleId": 2,
+  "Token": null
+},{
+  "_id": {
+    "$oid": "62a48152ad767325902699b2"
+  },
+  "FirstName": "SELLER",
+  "LastName": "LAST NAME",
+  "Password": "Pass@12345",
+  "Email": "seller109@auction.com",
+  "RoleId": 1,
+  "Token": null
+},{
+  "_id": {
+    "$oid": "62a4a9979853fea713888c30"
+  },
+  "FirstName": "Smith",
+  "LastName": "Gary",
+  "Password": "Pass@12345",
+  "Email": "seller90@auction.com",
+  "RoleId": 1,
+  "Token": null
+},{
+  "_id": {
+    "$oid": "62a6f480102e54e27abb7693"
+  },
+  "FirstName": "asdf",
+  "LastName": "asdf",
+  "Password": "Pass@12345",
+  "Email": "seller1091@auction.com",
+  "RoleId": 0,
+  "Token": null
+},{
+  "_id": {
+    "$oid": "62a701a08c0c0ef23a7d2c81"
+  },
+  "FirstName": "AAAAAAAA",
+  "LastName": "BBBBBBBB",
+  "Password": "Pass@2345",
+  "Email": "aaaabbbb@auction.com",
+  "RoleId": 1,
+  "Token": null
+},{
+  "_id": {
+    "$oid": "62a702a98c0c0ef23a7d2c82"
+  },
+  "FirstName": "AAAAAAAA",
+  "LastName": "BBBBBBBB",
+  "Password": "12345",
+  "Email": "aaaabbbbc@auction.com",
+  "RoleId": 0,
+  "Token": null
+},{
+  "_id": {
+    "$oid": "62a703378c0c0ef23a7d2c83"
+  },
+  "FirstName": "asdfasdf",
+  "LastName": "BBBBBBBB",
+  "Password": "12345",
+  "Email": "aaaabbbbcd@auction.com",
+  "RoleId": 1,
+  "Token": null
+},{
+  "_id": {
+    "$oid": "62a703d08c0c0ef23a7d2c84"
+  },
+  "FirstName": "SELLER100",
+  "LastName": "SELLER101",
+  "Password": "12345",
+  "Email": "SELLER178@auction.com",
+  "RoleId": 1,
+  "Token": null
+},{
+  "_id": {
+    "$oid": "62a757e972418e091c0b0c60"
+  },
+  "FirstName": "asdfasdf",
+  "LastName": "afdfsasdf",
+  "Password": "12345",
+  "Email": "seller180@auction.com",
+  "RoleId": 1,
+  "Token": null
+},{
+  "_id": {
+    "$oid": "62a9b91a3c022f1950b68e7e"
+  },
+  "FirstName": "Yogesh",
+  "LastName": "Joseph",
+  "Password": "password",
+  "Email": "testseller@gmail.com",
+  "RoleId": 1,
+  "Token": null
+},{
+  "_id": {
+    "$oid": "62a9bfd21f4db601502cd588"
+  },
+  "FirstName": "Yogesh",
+  "LastName": "Joseph",
+  "Password": "password",
+  "Email": "testseller1@gmail.com",
+  "RoleId": 1,
+  "Token": null
+},{
+  "_id": {
+    "$oid": "62aec623e62704ce91aba127"
+  },
+  "FirstName": "Buyer",
+  "LastName": "Account",
+  "Password": "test@1234",
+  "Email": "buyer1@gmail.com",
+  "RoleId": 2,
+  "Token": null
+},{
+  "_id": {
+    "$oid": "62aecfc251024420c459fce0"
+  },
+  "FirstName": "Seller",
+  "LastName": "Account",
+  "Password": "test@1234",
+  "Email": "seller@gmail.com",
+  "RoleId": 1,
+  "Token": null
+}]

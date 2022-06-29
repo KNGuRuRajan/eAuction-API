@@ -1,0 +1,297 @@
+[
+  {
+    "_id": {
+      "$oid": "629990875a3424a40cf170e9"
+    },
+    "FirstName": "string1000",
+    "LastName": "string02",
+    "Address": "string03",
+    "City": "string04",
+    "State": "string04",
+    "Pin": "78987678",
+    "Phone": {
+      "$numberLong": "9909898989"
+    },
+    "Email": "buyer100@auction.com",
+    "ProductId": "62a758fec840a6f02502fd71",
+    "BidAmount": "25485",
+    "BidStatus": "Pending",    
+    "Comment": "",
+    "CreatedAt": {
+      "$date": {
+        "$numberLong": "1654178750262"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "62a06282802a33ec466f4953"
+    },
+    "FirstName": "Yogesh",
+    "LastName": "Joseph",
+    "Address": "1 st street",
+    "City": "gowrivakkam",
+    "State": "tamilnadu",
+    "Pin": "600073",
+    "Phone": {
+      "$numberLong": "4541254544"
+    },
+    "Email": "buyer100@auction.com",
+    "ProductId": "62a758fec840a6f02502fd71",
+    "BidAmount": "1500",
+    "BidStatus": "Pending",    
+    "Comment": "",
+    "CreatedAt": {
+      "$date": {
+        "$numberLong": "1654764309215"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "62a3a50e894e51d6ae4cc5ba"
+    },
+    "FirstName": "KARTHIK",
+    "LastName": "KARTHIK",
+    "Address": "Road",
+    "City": "Tamilnadu",
+    "State": "Tamilnadu",
+    "Pin": "641035",
+    "Phone": {
+      "$numberLong": "9865828896"
+    },
+    "Email": "buyer@gmail.com",
+    "ProductId": "62a758fec840a6f02502fd71",
+    "BidAmount": "25",
+    "BidStatus": "Pending",    
+    "Comment": "",
+    "CreatedAt": {
+      "$date": {
+        "$numberLong": "1654978148562"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "62a42f414c3a504b98a41f95"
+    },
+    "FirstName": "Yogesh",
+    "LastName": "Joseph",
+    "Address": "1 st street",
+    "City": "gowrivakkam",
+    "State": "tamilnadu",
+    "Pin": "600073",
+    "Phone": {
+      "$numberLong": "4641478455"
+    },
+    "Email": "yogesh@gmail.com",
+    "ProductId": "62a758fec840a6f02502fd71",
+    "BidAmount": "250",
+    "BidStatus": "Pending",    
+    "Comment": "",
+    "CreatedAt": {
+      "$date": {
+        "$numberLong": "1655013532958"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "62a96f02f93eb3b283bdc919"
+    },
+    "FirstName": "Yogesh",
+    "LastName": "Joseph",
+    "Address": "1 st street",
+    "City": "gowrivakkam",
+    "State": "tamilnadu",
+    "Pin": "600073",
+    "Phone": {
+      "$numberLong": "7845451454"
+    },
+    "Email": "yogesh@gmail.com",
+    "ProductId": "62a84584c840a6f02502fd77",
+    "BidAmount": "260",
+    "BidStatus": "Pending",    
+    "Comment": "",
+    "CreatedAt": {
+      "$date": {
+        "$numberLong": "1655357495992"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "62adf2cb0a167d5128f38452"
+    },
+    "FirstName": "SELLER100",
+    "LastName": "SELLER101",
+    "Address": "Address",
+    "City": "hydrabad",
+    "State": "State",
+    "Pin": "600090",
+    "Phone": {
+      "$numberLong": "9809876545"
+    },
+    "Email": "buyer100@auction.com",
+    "ProductId": "627fbf0e454e9a63f8299d7e",
+    "BidAmount": {
+      "$numberDecimal": "2222"
+    },
+    "BidStatus": "Pending",    
+    "Comment": "",
+    "CreatedAt": {
+      "$date": {
+        "$numberLong": "1655567033413"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "62adf3ea0a167d5128f38453"
+    },
+    "FirstName": "gdfgsdfg",
+    "LastName": "sdfgsdfg",
+    "Address": "sdfgsdfg",
+    "City": "sdfgsdfg",
+    "State": "sdfgsdfg",
+    "Pin": "600090",
+    "Phone": {
+      "$numberLong": "9823456789"
+    },
+    "Email": "buyer100@auction.com",
+    "ProductId": "627fbf0e454e9a63f8299d80",
+    "BidAmount": {
+      "$numberDecimal": "1200"
+    },
+    "BidStatus": "Pending",    
+    "Comment": "",
+    "CreatedAt": {
+      "$date": {
+        "$numberLong": "1655567334593"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "62aee3c63473baad0134f25c"
+    },
+    "FirstName": "string",
+    "LastName": "string",
+    "Address": "string",
+    "City": "string",
+    "State": "string",
+    "Pin": "string",
+    "Phone": 0,
+    "Email": "string",
+    "ProductId": "string",
+    "BidAmount": "0",
+    "BidStatus": "Pending",    
+    "Comment": "",
+    "CreatedAt": {
+      "$date": {
+        "$numberLong": "1655628735452"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "62af2a430a167d5128f38454"
+    },
+    "FirstName": "testfirstname",
+    "LastName": "test last name",
+    "Address": "Address",
+    "City": "hydrabad",
+    "State": "State",
+    "Pin": "600090",
+    "Phone": {
+      "$numberLong": "9809876545"
+    },
+    "Email": "buyer100@auction.com",
+    "ProductId": "627fbf0e454e9a63f8299d7f",
+    "BidAmount": {
+      "$numberDecimal": "1209"
+    },
+    "BidStatus": "Pending",    
+    "Comment": "",
+    "CreatedAt": {
+      "$date": {
+        "$numberLong": "1655646782706"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "62b022a8a06baa1d6c6c19e0"
+    },
+    "FirstName": "Yogesh",
+    "LastName": "Joseph",
+    "Address": "test",
+    "City": "test",
+    "State": "test",
+    "Pin": "784545",
+    "Phone": {
+      "$numberLong": "7845548787"
+    },
+    "Email": "yogesh@gmail.com",
+    "ProductId": "62ac0c23a2528b807a983bb5",
+    "BidAmount": "2500",
+    "BidStatus": "Accepted",
+    "Comment": "Accepted",
+    "CreatedAt": {
+      "$date": {
+        "$numberLong": "1655796676222"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "62b04a4314268a8777dd302d"
+    },
+    "FirstName": "AAAAAAAA",
+    "LastName": "BBBBBBBB",
+    "Address": "Address",
+    "City": "City",
+    "State": "State",
+    "Pin": "600090",
+    "Phone": {
+      "$numberLong": "9809876545"
+    },
+    "Email": "buyer100@auction.com",
+    "ProductId": "6298afe26902caf8b079ca45",
+    "BidAmount": {
+      "$numberDecimal": "1200"
+    },
+    "BidStatus": "Rejected",    
+    "Comment": "Rejected because of high amount",
+    "CreatedAt": {
+      "$date": {
+        "$numberLong": "1655720515488"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "62b056fc1c68ec295e5510d5"
+    },
+    "FirstName": "SELLER100",
+    "LastName": "SELLER101",
+    "Address": "Address",
+    "City": "hydrabad",
+    "State": "State",
+    "Pin": "600090",
+    "Phone": {
+      "$numberLong": "9823456789"
+    },
+    "Email": "buyer100@auction.com",
+    "ProductId": "62a42f0dce6eb6271de1e436",
+    "BidAmount": {
+      "$numberDecimal": "2666"
+    },
+    "BidStatus": "Pending",  
+    "Comment": "",
+    "CreatedAt": {
+      "$date": {
+        "$numberLong": "1655723772587"
+      }
+    }
+  }]
